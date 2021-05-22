@@ -24,6 +24,9 @@ class Tests_of_Excercises(unittest.TestCase):
         context = len(iterate_by_float_step(self.from_step, self.to_step, self.by_step))
         self.assertEqual(context, 8)
 
+    def tearDown(self):
+        del self.data, self.data_len, self.postal_from, self.postal_to, self.from_step, self.to_step, self.by_step
+
 
 if __name__ == '__main__':
     unittest.main()
